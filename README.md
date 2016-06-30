@@ -39,6 +39,9 @@ Please run the following command to run MkPbDocs test cases written with
 $ make test
 ```
 
+Test cases will run in temporary folders in `tmp`, using runtime environment in
+`runtime` with linked scripts.
+
 ## Example
 
 The building of the MkPbDocs website also demonstrates how MkPbDocs works.  The
