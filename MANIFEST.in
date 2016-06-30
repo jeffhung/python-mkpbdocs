@@ -1,0 +1,4 @@
+include requirements.txt
+include example/addressbook.proto
+include example/person.proto
+
