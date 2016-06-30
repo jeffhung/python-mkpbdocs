@@ -83,15 +83,15 @@ bdist_egg: README.rst
 README.rst:
 	pandoc --from=markdown --to=rst --output=README.rst README.md
 
-.PHONY: pbdocs
-pbdocs:
+.PHONY: site
+site:
 	. runtime/bin/activate; \
 	protoc --pbdocs_out=docs --proto_path=example \
 		example/addressbook.proto example/person.proto;
 	cat docs/addressbook.json | jq .
 
-#.PHONY: vagrant-pbdocs
-#vagrant-pbdocs:
+#.PHONY: vagrant-site
+#vagrant-site:
 #	clear;
-#	vagrant ssh --command "make -C /vagrant pbdocs";
+#	vagrant ssh --command "make -C /vagrant site";
 
